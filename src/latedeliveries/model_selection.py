@@ -188,7 +188,12 @@ def compare_and_tune():
     print(f"Flag everybody cost: ${all_cost}")
     print("\nTest set has NOT been evaluated.")
 
-    return search.best_estimator_, threshold
+    return (
+        search.best_estimator_,
+        threshold,
+        search.best_params_,
+        winner_name,
+    )
 
 
 if __name__ == "__main__":
